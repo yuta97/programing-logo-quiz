@@ -1,0 +1,23 @@
+<h1>クイズ画面</h1>
+<p>
+	<%= image_tag @quiz.img.url %>
+</p>
+<ol>
+	<li><%= @quiz.choice1 %></li>
+	<li><%= @quiz.choice2 %></li>
+	<li><%= @quiz.choice3 %></li>
+	<li><%= @quiz.choice4 %></li>
+</ol>
+<button type="button" onclick="clickBtn1()">正解を表示</button>
+<p id="p1"><%= @quiz.answer %></p>
+<script type="text/javascript">
+	document.getElementById("p1").style.display = "none";
+    function clickBtn1(){
+    	const p1 = document.getElementById("p1");
+	    p1.style.display = ""
+    }
+</script>
+<% if current_user == @quiz.user %>
+  <%= link_to '編集', edit_quiz_path(@quiz)%>
+  <%= link_to '削除', @quiz, method: :delete, data: {confirm: '削除します'} %>
+<% end %>

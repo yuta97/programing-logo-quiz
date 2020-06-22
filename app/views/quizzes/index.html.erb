@@ -1,0 +1,7 @@
+<h1>クイズ一覧</h1>
+<p>気になるクイズは画像を押してね</p>
+<div class="container">
+	<% @quizzes.each do |quiz| %>
+	<div class="item"><%= link_to image_tag(quiz.img.url) , quiz %></div>
+	<% end %>
+</div>

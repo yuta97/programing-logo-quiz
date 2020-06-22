@@ -1,0 +1,15 @@
+<h1>クイズ新規作成</h1>
+<%= form_with(model: @quiz, local:true) do |f| %>
+  <%= f.label :img, '画像' %>
+  <%= f.file_field :img, class:"image" %>
+  <%= f.label :choice1,'選択肢1' %>
+  <%= f.text_field :choice1 %>
+  <%= f.label :choice1,'選択肢2' %>
+  <%= f.text_field :choice2 %>
+  <%= f.label :choice1,'選択肢3' %>
+  <%= f.text_field :choice3 %>
+  <%= f.label :choice1,'選択肢4' %>
+  <%= f.text_field :choice4 %>
+  <%= f.select :answer, [[1,1],[2,2],[3,3],[4,4]]%>
+  <%= f.submit '投稿' %>  
+<% end %>
