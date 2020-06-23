@@ -23,4 +23,3 @@ Things you may want to cover:
 
 * ...
 # programing-logo-quiz
-# programing-logo-quiz
